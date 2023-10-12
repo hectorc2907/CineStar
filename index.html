@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cinestar Proyecto Rolling" />
+    <meta name="keywords" content="peliculas, series, diversion, stream" />
+    <meta
+      name="author"
+      content="Grabriel Lezcano, Hector Clessi, Malena de Arriba - Grupo5"
+    />
+    <link rel="stylesheet" href="./css/footerStyle.css" />
+    <link rel="stylesheet" href="./css/styleNavbar.css" />
+    <link rel="stylesheet" href="./css/styleIndex.css" />
+    <link rel="stylesheet" href="./css/styleSuscripcion.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./img/logos/LOGO SOLO.png">
+    <title>Cinestar</title>
+  </head>
+
+  <body id="estilo_body_index">
+    <header>
+      <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./img/logos/LOGO SOLO.png"
+              alt="Logo Cinestar"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavegacion"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            id="menuNavegacion"
+            class="collapse navbar-collapse justify-content-end"
+          >
+            <ul class="navbar-nav ms-3">
+              <li class="nav-item m-lg-3 m-md-2 m-2">
+                <form class="d-flex" role="search">
+                  <input
+                    type="search"
+                    class="form-control me-2"
+                    placeholder="Buscar"
+                    aria-label="Buscar"
+                  />
+                  <button
+                    class="btn border border-success-subtle"
+                    type="submit"
+                    id="link-boton-suscribirse"
+                  >
+                    Buscar
+                  </button>
+                </form>
+              </li>
+              <li class="nav-item my-lg-3 mx-lg-2 my-md-2 mx-md-1 m-2">
+                <button
+                  class="btn"
+                  type="submit"
+                  id="color-boton-login-navar"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                >
+                  <a href="#" id="link-boton-suscribirse">Login</a>
+                </button>
+              </li>
+              <li class="nav-item my-lg-3 mx-lg-2 my-md-2 mx-md-1 m-2">
+                <button
+                  class="btn"
+                  type="submit"
+                  id="color-boton-suscribirse-navar"
+                >
+                  <a href="./pages/suscripcion.html" id="link-boton-suscribirse"
+                    >Suscribirse</a
+                  >
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        aria-labelledby="loginVentanaModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content" id="diseño_modal_login">
+            <div class="modal-header">
+              <h1 class="modal-title fs-3" id="loginModal">Ingresar</h1>
+              <button
+                type="button"
+                class="btn btn-outline-light"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                X
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="tipografia_formulario">
+                <div class="mb-3">
+                  <label for="inputEmail" class="form-label fs-5 fw-bold"
+                    >Correo electronico</label
+                  >
+                  <input
+                    type="email"
+                    placeholder="Ej: juanperez@gmail.com"
+                    class="form-control text-light"
+                    id="inputEmail"
+                    required
+                    minlength="12"
+                    maxlength="350"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="inputContraseña" class="form-label fs-5 fw-bold"
+                    >Contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control text-light"
+                    id="inputContraseña"
+                    required
+                    minlength="8"
+                    maxlength="15"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="submit" class="btn" id="color-boton-ingresar">
+                <a href="./pages/Error.html" id="link-boton-suscribirse"
+                  >INGRESAR</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Categorias</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/catComedia.html">Comedia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/catCienciaFiccion.html"
+                  >Ciencia Ficción</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/catDrama.html">Drama</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/Error.html">Terror</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section id="indexCarrusel">
+        <div
+          id="carouselIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselIndicators"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2500">
+              <img
+                src="img/Carrusel/01_Avatar2.jpeg"
+                class="d-block w-100 img-fluid"
+                alt="avatar2"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+              <img
+                src="img/Carrusel/02_GatoConBotas2.jpg"
+                class="d-block w-100 img-fluid"
+                alt="gato2"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+              <img
+                src="img/Carrusel/03_TheBatman.jpg"
+                class="d-block w-100 img-fluid"
+                alt="batman"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+              <img
+                src="img/Carrusel/04_JurassicWorld3.jpg"
+                class="d-block w-100 img-fluid"
+                alt="jurassicworld3"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+              <img
+                src="img/Carrusel/05_HarryPotter.jpg"
+                class="d-block w-100 img-fluid"
+                alt="harrypotter"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="2500">
+              <img
+                src="img/Carrusel/06_Avenger.jpg"
+                class="d-block w-100 img-fluid"
+                alt="avenger"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="container-fluid text-center pb-5 mt-4">
+        <h1 class="pb-3 fw-bold" id="titulo-planes-disponibles-index">
+          PLANES DISPONIBLES
+        </h1>
+        <div class="row justify-content-evenly pt-5">
+          <div class="col-9 col-md-6 col-lg-3 pb-3">
+            <div
+              class="card text-center border border-danger text-light"
+              id="color_contenedor_plan"
+            >
+              <div class="card-header border-bottom border-danger">
+                PLAN MENSUAL
+              </div>
+              <div class="card-body">
+                <p>Contenido completo durante 30 días</p>
+                <p>2 dispositivos en simultáneo</p>
+                <p>5 peliculas para descargar sin costo</p>
+                <p>Un pre-estreno disponible</p>
+              </div>
+              <div class="text-center mb-2">
+                <button type="submit" class="btn" id="color-boton-suscribirse">
+                  <a href="./pages/suscripcion.html" id="link-boton-suscribirse"
+                    >CONTRATAR</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-md-6 col-lg-3 pb-3">
+            <div
+              class="card text-center border border-danger text-light"
+              id="color_contenedor_plan"
+            >
+              <div class="card-header border-bottom border-danger">
+                PLAN SEMESTRAL
+              </div>
+              <div class="card-body">
+                <p>Contenido completo durante 183 días</p>
+                <p>4 dispositivos en simultáneo</p>
+                <p>10 peliculas para descargar sin costo</p>
+                <p>4 pre-estrenos disponibles</p>
+              </div>
+              <div class="text-center mb-2">
+                <button type="submit" class="btn" id="color-boton-suscribirse">
+                  <a href="./pages/suscripcion.html" id="link-boton-suscribirse"
+                    >CONTRATAR</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-9 col-md-6 col-lg-3">
+            <div
+              class="card text-center border border-danger text-light"
+              id="color_contenedor_plan"
+            >
+              <div class="card-header border-bottom border-danger">
+                PLAN ANUAL
+              </div>
+              <div class="card-body">
+                <p>Contenido completo durante 365 días</p>
+                <p>8 dispositivos en simultáneo</p>
+                <p>20 peliculas para descargar sin costo</p>
+                <p>10 pre-estrenos disponibles</p>
+              </div>
+              <div class="text-center mb-2">
+                <button type="submit" class="btn" id="color-boton-suscribirse">
+                  <a href="./pages/suscripcion.html" id="link-boton-suscribirse"
+                    >CONTRATAR</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="indexContenidos" class="container my-5">
+        <h2 class="text-center my-4" id="titulos-index">
+          Los mejores contenidos
+        </h2>
+        <div class="d-flex flex-wrap">
+          <article
+            class="m-auto p-3 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+          >
+            <img src="img/Contenidos/01_Avatar2.jpg" alt="" class="img-fluid" />
+          </article>
+          <article
+            class="m-auto p-3 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+          >
+            <img
+              src="img/Contenidos/02_TheLastOfUs.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </article>
+          <article
+            class="m-auto p-3 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+          >
+            <img
+              src="img/Contenidos/03_DoctorStrange2.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </article>
+          <article
+            class="m-auto p-3 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+          >
+            <img
+              src="img/Contenidos/04_TheBigBangTheory.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </article>
+          <article
+            class="m-auto p-3 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+          >
+            <img
+              src="img/Contenidos/05_TheWitch.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </article>
+          <article
+            class="m-auto p-3 col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+          >
+            <img
+              src="img/Contenidos/06_BreakingBad.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </article>
+        </div>
+      </section>
+      <section id="indexPreguntas" class="container-fluid my-5">
+        <h2 class="text-center my-4" id="titulos-index">
+          Preguntas Frecuentes
+        </h2>
+        <div class="accordion" id="accordionPanelsStayOpen">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                Dispositivos compatibles
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingOne"
+            >
+              <div class="accordion-body">
+                <h5>Navegadores web</h5>
+                <ul>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Requisitos del sistema para ver Disney+ con un navegador
+                      web</a
+                    >
+                  </li>
+                </ul>
+                <h5>Dispositivos móviles</h5>
+                <ul>
+                  <li>
+                    <a href="./pages/Error.html">iPhones y iPads Apple</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Teléfonos y tabletas Android</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Tableta Amazon Fire</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Tabletas y computadoras con Windows 10 y 11</a
+                    >
+                  </li>
+                </ul>
+                <h5>Dispositivos conectados a la TV</h5>
+                <ul>
+                  <li>
+                    <a href="./pages/Error.html">Amazon Fire TV</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Apple TV (4.ª generación o posterior)</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Chromecast</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">PlayStation</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Roku</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Xbox</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Dispositivos Android TV</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Smart TV Hisense</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Smart TV LG WebOS</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Samsung Tizen Smart TV</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Decodificadores de Cablevisión Flow</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Decodificadores 4K de Telecentro</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Decodificadores de Movistar</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                Metodos de pago
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo"
+            >
+              <div class="accordion-body">
+                <h5>Tarjetas de crédito y débito</h5>
+                <p>Aceptamos las siguientes tarjetas de crédito o débito*:</p>
+                <ul>
+                  <li>Visa</li>
+                  <li>Mastercard</li>
+                </ul>
+                * Por el momento, no admitimos tarjetas internacionales.
+                <h5>Pagos digitales</h5>
+                Puedes pagar Cinestar con los siguientes métodos de pago
+                digitales:
+                <ul>
+                  <li>Mercado pago</li>
+                </ul>
+                Puedes depositar dinero en tu cuenta de Mercado Pago de diversas
+                maneras. Consulta en
+                <a href="./pages/Error.html">Mercado Pago</a> los métodos de
+                transferencia aceptados.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                Cambiar de la suscripción mensual a la anual
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree"
+            >
+              <div class="accordion-body">
+                <p>
+                  Suscribirte a Cinestar por un año te permite disfrutar de un
+                  sinfín de películas y series de forma más económica. Quienes
+                  tengan una suscripción mensual pueden cambiar a una anual
+                  fácilmente. Si es tu primera vez en Cinestar, tienes la opción
+                  de elegir entre una suscripción mensual o anual al
+                  suscribirte.<br />
+                  Selecciona la plataforma de tu dispositivo para ver
+                  instrucciones detalladas sobre cómo cambiar a una suscripción
+                  anual.
+                </p>
+                <ul>
+                  <li>
+                    <a href="./pages/Error.html">Navegador Web</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html">Dispositivo Movil</a>
+                  </li>
+                </ul>
+                <p>
+                  Nota: Es posible que quienes tengan una suscripción a través
+                  de terceros puedan acceder a la facturación anual, dependiendo
+                  del socio de facturación.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-heaFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFour"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFour"
+              >
+                Problemas de inicio de sesión en Cinestar
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFour"
+            >
+              <div class="accordion-body">
+                <p>
+                  Si tienes problemas para iniciar sesión en Cinestar,
+                  selecciona abajo la opción que más se adapte a tu caso para
+                  más información:
+                </p>
+                <ul>
+                  <li>
+                    <a href="./pages/Error.html">No sé cómo iniciar sesión.</a>
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Olvidé la contraseña o dirección de correo
+                      electrónico.</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Nunca recibí el código para restablecer mi contraseña.</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Me informaron que mis datos para iniciar sesión
+                      cambiaron.</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./pages/Error.html"
+                      >Ninguna de las opciones anteriores.
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-heaFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseFive"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseFive"
+              >
+                Código de error 142: “Lo sentimos, tenemos problemas para
+                conectarte al servicio...”
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingFive"
+            >
+              <div class="accordion-body">
+                <p>
+                  Si te aparece el mensaje de error a continuación al intentar
+                  iniciar Cinestar, selecciona una de las siguientes opciones
+                  para más información:
+                </p>
+                <h5>
+                  “Lo sentimos, tenemos problemas para conectarte al servicio.
+                  Verifica que aún tengas conexión a internet e intenta de nuevo
+                  (código de error 142)”.
+                  <ul>
+                    <li>
+                      <a href="./pages/Error.html">Causa del error</a>
+                    </li>
+                    <li>
+                      <a href="./pages/Error.html">Solucion de problemas</a>
+                    </li>
+                    <li>
+                      <a href="./pages/Error.html"
+                        >Códigos de error relacionados</a
+                      >
+                    </li>
+                  </ul>
+                </h5>
+                <h4>Causa</h4>
+                <p>
+                  Es probable que se trate de un problema de conexión a internet
+                  o a la red. Estas son algunas de las causas posibles:
+                </p>
+                <ul>
+                  <li>Conexion a internet inestable o lenta</li>
+                  <li>Señal wifi débil</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contenedor">
+        <div class="nosotros">
+          <div class="divimg">
+            <img src="./img/logos/CINESSTAR_(1).png" id="logo" alt="logo" />
+          </div>
+          <ul class="redes-sociales">
+            <li>
+              <a href="./pages/Error.html">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="./pages/Error.html">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a href="./pages/Error.html">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="./pages/Error.html">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="navegacion">
+          <h2 class="titulos-footer">Menu navegación</h2>
+          <ul>
+            <li class="sin-li">
+              <a href="index.html" class="sin-sub">Inicio</a>
+            </li>
+            <li class="sin-li">
+              <a href="./pages/contacto.html" class="sin-sub">Contacto</a>
+            </li>
+            <li class="sin-li">
+              <a href="./pages/nosotros.html" class="sin-sub"
+                >Acerca de Nosotros</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="titulos-footer">Contáctanos</h2>
+          <ul class="informacion-contacto">
+            <li>
+              <span>
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+              <p>Calle Alcala, 48 <br />Madrid (28014).</p>
+            </li>
+            <li>
+              <span>
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <p>913385000 <br />915214870 <br />913385236</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">
+        copyright &copy Proyecto desarrollado por Grupo5 RC-42i.
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

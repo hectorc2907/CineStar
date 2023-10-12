@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    margin-top: 70px;
+}
+#titulo-planes-Disponibles {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 600%;
+    color: white;
+    text-shadow: 6px 4px 4px #F90030;
+}
+
+#titulo_formulario {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 300%;
+    color: white;
+    text-shadow: 3px 3px 3px #F90030;
+}
+
+#color_contenedor_plan {
+    background-color: black;
+    border: #F90030;
+}
+
+#posicion_contenedor_planes {
+    position: relative;
+    top: -100px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#tipografia_formulario {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#inputNombre, #inputApellido, #inputEmail, #inputContraseña, #plan-mensual, #plan-semestral, #plan-anual {
+    background-color: #560019;
+    border-color: #F90030;
+}
+
+#inputNombre::placeholder, #inputApellido::placeholder, #inputEmail::placeholder, #inputContraseña::placeholder {
+    color: white;
+}
+
+#color-boton-suscribirse {
+    background-color: #F90030;
+}
+
+
+
+#link-boton-suscribirse {
+    text-decoration: none;
+    color: white;
+}
+
+#marginContainerImagen {
+    padding-right: 0px;
+    padding-left: 0px;
+    border: none;
+}
+
+#color-fondo-main-suscripcion {
+    background-color: black;
+}
+
+
+
+
+
+
+
+@media all and (max-width: 576px) {
+    #bannerSuscripcion {
+        object-fit: contain;
+    }
+
+    #titulo-planes-Disponibles {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 200%;
+        color: white;
+        text-shadow: 6px 4px 4px #F90030;
+    }
+
+    #posicion_contenedor_planes {
+        position: relative;
+        top: auto;
+        
+    }
+
+    #titulo_formulario {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 130%;
+        color: white;
+        text-shadow: 3px 3px 3px #F90030;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    #bannerSuscripcion {
+        object-fit: contain;
+        
+    }
+
+    #titulo-planes-Disponibles {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 300%;
+        color: white;
+        text-shadow: 6px 4px 4px #F90030;
+    }
+
+    #titulo_formulario {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 200%;
+        color: white;
+        text-shadow: 3px 3px 3px #F90030;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    #bannerSuscripcion {
+        object-fit: cover;
+        height: 700px;
+    }
+}
+

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cinestar Proyecto Rolling" />
+    <meta name="keywords" content="peliculas, series, diversion, stream" />
+    <meta name="author" content="Gabriel Lezcano - Grupo5" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/styleNavbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/footerStyle.css" />
+    <link rel="stylesheet" href="../css/CatStyle.css" />
+    <link rel="icon" href="../img/logos/LOGO SOLO.png">
+    <title>Cinestar</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="../img/logos/LOGO SOLO.png"
+              alt="Logo Cinestar"
+              width="50"
+              height="50"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuNavegacion"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            id="menuNavegacion"
+            class="collapse navbar-collapse justify-content-end"
+          >
+            <ul class="navbar-nav ms-3">
+              <li class="nav-item m-lg-3 m-md-2 m-2">
+                <form class="d-flex" role="search">
+                  <input
+                    type="search"
+                    class="form-control me-2"
+                    placeholder="Buscar"
+                    aria-label="Buscar"
+                  />
+                  <button
+                    class="btn border border-success-subtle"
+                    type="submit"
+                    id="link-boton-suscribirse"
+                  >
+                    Buscar
+                  </button>
+                </form>
+              </li>
+              <li class="nav-item my-lg-3 mx-lg-2 my-md-2 mx-md-1 m-2">
+                <button
+                  class="btn"
+                  type="submit"
+                  id="color-boton-login-navar"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                >
+                  <a href="#" id="link-boton-suscribirse">Login</a>
+                </button>
+              </li>
+              <li class="nav-item my-lg-3 mx-lg-2 my-md-2 mx-md-1 m-2">
+                <button
+                  class="btn"
+                  type="submit"
+                  id="color-boton-suscribirse-navar"
+                >
+                  <a href="./suscripcion.html" id="link-boton-suscribirse"
+                    >Suscribirse</a
+                  >
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        aria-labelledby="loginVentanaModal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content" id="diseño_modal_login">
+            <div class="modal-header">
+              <h1 class="modal-title fs-3" id="loginModal">Ingresar</h1>
+              <button
+                type="button"
+                class="btn btn-outline-light"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                X
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="tipografia_formulario">
+                <div class="mb-3">
+                  <label for="inputEmail" class="form-label fs-5 fw-bold"
+                    >Correo electronico</label
+                  >
+                  <input
+                    type="email"
+                    placeholder="Ej: juanperez@gmail.com"
+                    class="form-control text-light"
+                    id="inputEmail"
+                    required
+                    minlength="12"
+                    maxlength="350"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="inputContraseña" class="form-label fs-5 fw-bold"
+                    >Contraseña</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control text-light"
+                    id="inputContraseña"
+                    required
+                    minlength="8"
+                    maxlength="15"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="submit" class="btn" id="color-boton-ingresar">
+                <a href="" id="link-boton-suscribirse">INGRESAR</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="maincat">
+      <nav
+        class="navbar navbar-expand-lg bg-body-tertiary bg-dark"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Categorias</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./catComedia.html">Comedia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./catCienciaFiccion.html"
+                  >Ciencia Ficción</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./catDrama.html">Drama</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Error.html">Terror</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="contenedorCentrado">
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/1-20000sub.png"
+            alt="20000 leguas de viaje submarino"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/10-avengersEraUltron.png"
+            alt="Avengers era de ultron"
+          />
+        </div>
+        <div>
+          <a href="../pages/pelicula.html">
+            <img
+              class="imagenFormato"
+              src="../img/cienciaFiccion/11-avengersEndGame.png"
+              alt="avengers, end game"
+            />
+          </a>
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/12-avengersInfinityWar.png"
+            alt="avengers, infinity war"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/13-abismoNegro.png"
+            alt="abismo negro"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/14-panteraNegra.png"
+            alt="pantera negra"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/15-wakanda.png"
+            alt="wakanda"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/16-blackWidow.png"
+            alt="black y widow"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/2-viajeEnelTiempo.png"
+            alt="viaje en el tiempo"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/3-criaturasDelAbismo.png"
+            alt="criaturas del abismo"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/4-hombreArana2.png"
+            alt="hombre araña 2"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/5-atmanWasp.png"
+            alt="atman y waasp"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/6-artemisFowl.png"
+            alt="artemis fowl"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/7-atman.png"
+            alt="atman"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/8-avatar.png"
+            alt="avatar"
+          />
+        </div>
+        <div>
+          <img
+            class="imagenFormato"
+            src="../img/cienciaFiccion/9-avengers.png"
+            alt="avengers"
+          />
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="contenedor">
+        <div class="nosotros">
+          <div class="divimg">
+            <img src="../img/logos/CINESSTAR_(1).png" id="logo" alt="logo" />
+          </div>
+          <ul class="redes-sociales">
+            <li>
+              <a href="./Error.html"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="./Error.html"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+              <a href="./Error.html"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="./Error.html"><i class="fa-brands fa-tiktok"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="navegacion">
+          <h2 class="titulos-footer">Menu navegación</h2>
+          <ul>
+            <li class="sin-li">
+              <a href="../index.html" class="sin-sub">Inicio</a>
+            </li>
+            <li class="sin-li">
+              <a href="./contacto.html" class="sin-sub">Contacto</a>
+            </li>
+            <li class="sin-li">
+              <a href="./nosotros.html" class="sin-sub">Acerca de Nosotros</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="titulos-footer">Contáctanos</h2>
+          <ul class="informacion-contacto">
+            <li>
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <p>
+                Calle Alcala, 48 <br />
+                Madrid (28014).
+              </p>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <p>
+                913385000 <br />
+                915214870 <br />
+                913385236
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">
+        copyright &copy Proyecto desarrollado por Grupo5 RC-42i.
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

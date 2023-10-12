@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+main {
+    margin-top: 50px;
+}
+
+#color-boton-enviar {
+    background-color: #F90030;
+    color: white;
+}
+
+#inputName, #inputEmail1, #formControlTextarea1 {
+    background-color: #560019;
+    border-color: #F90030;
+}
+
+#inputName::placeholder, #inputEmail1::placeholder, #formControlTextarea1::placeholder {
+    color: white;
+}

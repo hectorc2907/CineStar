@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#tamaño-contenido-similar {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.accordion-button {
+    border: 1px solid #F90030;
+}
+
+.accordion-button:not(.collapse) {
+    color: inherit;
+    background-color: black;
+    color: white;
+}
+
+.accordion-button:not(.collapse)::after {
+    filter: brightness(90%); 
+    filter: invert(90%);
+}
+
+.accordion-button:focus {
+    box-shadow: inherit;
+}
+
+.accordion-item {
+    background-color: black;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+@media all and (max-width: 576px) {
+    main {
+        margin-top: 130px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    main {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    main {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+
+
+
+
+
+
+
+
+

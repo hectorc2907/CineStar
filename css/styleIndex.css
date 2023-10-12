@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#estilo_body_index {
+  background-color: black;
+  margin-top: 75px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#titulo-planes-disponibles-index {
+  font-family: "Montserrat", sans-serif;
+  font-size: 150%;
+  color: white;
+  text-shadow: 6px 4px 4px #f90030;
+}
+
+#titulos-index {
+  font-family: "Montserrat", sans-serif;
+  font-size: 250%;
+  color: white;
+  text-shadow: 6px 4px 4px #f90030;
+}
+
+.accordion-header {
+  border: 1px solid #f90030;
+}
+
+.accordion-button:not(.collapse) {
+  background-color: black;
+  color: white;
+}
+
+.accordion-button:not(.collapse)::after {
+  filter: brightness(90%);
+  filter: invert(90%);
+}
+
+.accordion-button:focus {
+  box-shadow: inherit;
+}
+
+.accordion-item {
+  background-color: black;
+}
+
