@@ -21,7 +21,7 @@ En este proyecto ponemos en practica todo lo aprendido durante el cursado del mo
 
 -Prueba de las etiquetas HTML5, entre usos de clases y id.  
 -Prueba de los etilos, principalmente el uso de flexbox.  
--Prueba de las mediaqueries para un uso responsive en multiples dispositivos. 
+-Prueba de las mediaqueries para un uso responsive en multiples dispositivos.  
 -Prueba de las etiquetas con diseño Bootstrap 
 
 ## Tecnologías
@@ -32,7 +32,7 @@ En este proyecto ponemos en practica todo lo aprendido durante el cursado del mo
 ## Demostración
 
 Enlace:
-[PanaderiaCocu]()  
+[CineStar](https://cinestargroup3.netlify.app/)  
 Dispositivos Pequeños  
 ![Dispositivos Pequeños](https://github.com/hectorc2907/CineStar/blob/dev/img/capturas/Small.PNG)  
 Dispositvos Medianos  
